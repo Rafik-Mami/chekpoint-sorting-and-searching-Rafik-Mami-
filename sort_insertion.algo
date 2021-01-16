@@ -1,0 +1,33 @@
+ALGORITHM SORT_INSERTION
+VAR
+i,j,x:INTEGER
+tab : ARRAY_OF INTEGER[n];
+
+BEGIN
+//initialize list size 
+DO
+read(n);
+UNTIL (n<=0)
+//initialization of table elements 
+FOR i FROM 1 TO  n STEP 1 DO
+Read(tab[i])
+END_FOR
+ FOR i FROM 2 TO  n STEP 1 DO
+ j=i
+ x=tab[i]
+ // we take the element in an auxiliary variable and compare it with the list elements sorted on the left.  x=tab[i]
+WHILE(tab[j-1]> tab[i])//condition of shift from left to right 
+//shifting of the elements
+tab[j]=tab[j-1];
+
+j--;
+
+END_WHILE
+// put the element in the already sorted list
+// if no element is inferior to x then it will keep the same place because j=i , we did not enter the loop (while)
+tab[j]=x
+
+END_FOR
+END_FOR
+
+END
