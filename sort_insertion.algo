@@ -27,7 +27,7 @@ END_WHILE
 // if no element is inferior to x then it will keep the same place because j=i , we did not enter the loop (while)
 tab[j]=x
 
-END_FOR
+
 END_FOR
 
 END
